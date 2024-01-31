@@ -1,0 +1,31 @@
+diff --git a/node_modules/@netlify/plugin-nextjs/dist/esm-chunks/chunk-IZ2AVCVF.js b/node_modules/@netlify/plugin-nextjs/dist/esm-chunks/chunk-IZ2AVCVF.js
+index 0da3650..1b0a73d 100644
+--- a/node_modules/@netlify/plugin-nextjs/dist/esm-chunks/chunk-IZ2AVCVF.js
++++ b/node_modules/@netlify/plugin-nextjs/dist/esm-chunks/chunk-IZ2AVCVF.js
+@@ -10,7 +10,7 @@ import {
+ 
+ // src/build/plugin-context.ts
+ import { readFileSync } from "node:fs";
+-import { mkdir, readFile, writeFile, stat } from "node:fs/promises";
++import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
+ import { dirname, join, resolve } from "node:path";
+ import { fileURLToPath } from "node:url";
+ var MODULE_DIR = fileURLToPath(new URL(".", import.meta.url));
+@@ -130,6 +130,7 @@ var PluginContext = class {
+    */
+   async writeCacheEntry(route, value, filePath) {
+     const { mtime } = await stat(filePath);
++    console.log(`Writing cache entry for ${route} at ${mtime}`);
+     const path = join(this.blobDir, await encodeBlobKey(route));
+     const entry = JSON.stringify({
+       lastModified: mtime.getTime(),
+@@ -145,7 +146,7 @@ var PluginContext = class {
+ };
+ 
+ export {
+-  SERVER_HANDLER_NAME,
+   EDGE_HANDLER_NAME,
+-  PluginContext
++  PluginContext, SERVER_HANDLER_NAME
+ };
++
