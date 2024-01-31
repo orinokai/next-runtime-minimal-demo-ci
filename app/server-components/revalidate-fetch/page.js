@@ -1,6 +1,6 @@
 async function getData() {
   const res = await fetch(`https://strangerthings-quotes.vercel.app/api/quotes`, {
-    next: { revalidate: 20 },
+    next: { revalidate: 300 },
   });
   return res.json();
 }
