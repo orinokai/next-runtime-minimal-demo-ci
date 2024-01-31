@@ -10,7 +10,7 @@ Recommended setup:
 
 After setting up the site, ensure you have the [Next.js Minimal Runtime](https://github.com/netlify/next-minimal-runtime) repo cloned in an adjacent directory named 'next-runtime-minimal' and add it to the VSCode workspace so you can work on both together.
 
-## Development  
+## Development   
 
 After making changes to the Next.js Minimal Runtime, run one of the build tasks (build, deploy or serve) to test your changes with this demo site. You can do this by running the `Tasks: Run Task` command in VSCode or with the Cmd+Shift+B shortcut. Note that running any of the build tasks will first run a `tsc` in the minimal runtime directory to compile the latest source.
 
