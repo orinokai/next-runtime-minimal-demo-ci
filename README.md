@@ -1,6 +1,6 @@
 This is a starter [Next.js](https://nextjs.org/) site to test the Next.js Minimal Runtime.
 
-## Getting Started
+## Getting Started 
 
 Recommended setup:
 
